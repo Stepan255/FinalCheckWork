@@ -43,7 +43,7 @@ void Demo()
 	int lengthArray = new Random().Next(10, 50);
 
 	int[] namberArray = new int[lengthArray];
-	FillArray(namberArray, 0, 20);
+	FillArray(namberArray, 1, 20);
 	Console.WriteLine(ArrayToString(namberArray));
 
 	int[] arrayOfEvenNamber = SelectionOfEvenNumbers(namberArray);
