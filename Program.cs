@@ -40,11 +40,11 @@ void Demo()
 {
 	Console.Clear();
 
-	int lengthArray = new Random().Next(10, 100);
+	int lengthArray = new Random().Next(10, 50);
 
 	int[] namberArray = new int[lengthArray];
 	FillArray(namberArray, 0, 20);
-	if (lengthArray < 50) Console.WriteLine(ArrayToString(namberArray));
+	Console.WriteLine(ArrayToString(namberArray));
 
 	int[] arrayOfEvenNamber = SelectionOfEvenNumbers(namberArray);
 	Console.WriteLine();
