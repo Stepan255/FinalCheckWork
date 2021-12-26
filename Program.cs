@@ -2,11 +2,11 @@
 // TODO Первоначальный массив можно ввести с клавиатуры, либо сгенерировать случайным образом. 
 // TODO При решении не рекомендуется пользоваться коллекциями, лучше обойтись исключительно массивами.
 
-void FillArray(int[] array)
+void FillArray(int[] array, int min, int max)
 {
 	for (int i = 0; i < array.Length; i++)
 	{
-		array[i] = new Random().Next(0, 21);
+		array[i] = new Random().Next(min, max + 1);
 	}
 }
 
@@ -36,14 +36,19 @@ int[] SelectionOfEvenNumbers(int[] startArray)
 	return newArray;
 }
 
-Console.Clear();
+void Demo()
+{
+	Console.Clear();
 
-int lengthArray = new Random().Next(10, 51);
+	int lengthArray = new Random().Next(10, 50);
 
-int[] namberArray = new int[lengthArray];
-FillArray(namberArray);
-if (lengthArray < 50) Console.WriteLine(ArrayToString(namberArray));
+	int[] namberArray = new int[lengthArray];
+	FillArray(namberArray, 0, 20);
+	Console.WriteLine(ArrayToString(namberArray));
 
-int[] arrayOfEvenNamber = SelectionOfEvenNumbers(namberArray);
-Console.WriteLine();
-Console.WriteLine(ArrayToString(arrayOfEvenNamber));
+	int[] arrayOfEvenNamber = SelectionOfEvenNumbers(namberArray);
+	Console.WriteLine();
+	Console.WriteLine(ArrayToString(arrayOfEvenNamber));
+}
+
+Demo();
